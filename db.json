@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "menu": "Fresh Mushrooms",
+      "introduce": "Far far away, behind the word mountains, far from the countries Vokalia..",
+      "img_url": "http://localhost:63342/ft5_62_savory/static/images/img_1.jpg",
+      "price": "18.75",
+      "id": 6
+    },
+    {
+      "menu": "Grilled Chiken Salad",
+      "introduce": "Far far away, behind the word mountains, far from the countries Vokalia..",
+      "img_url": "http://localhost:63342/ft5_62_savory/static/images/img_3.jpg",
+      "price": "8.99",
+      "id": 7
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
