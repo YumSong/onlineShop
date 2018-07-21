@@ -1,18 +1,112 @@
 {
-  "posts": [
+  "pobular_shops": [
     {
-      "menu": "Fresh Mushrooms",
+      "shopName": "Mushrooms",
       "introduce": "Far far away, behind the word mountains, far from the countries Vokalia..",
-      "img_url": "http://localhost:63342/ft5_62_savory/static/images/img_1.jpg",
-      "price": "18.75",
-      "id": 6
+      "img_url": "http://localhost:63342/onlineShop/static/images/shop1.jpg",
+      "id": 1
     },
     {
-      "menu": "Grilled Chiken Salad",
+      "shopName": "Chiken Rooms",
       "introduce": "Far far away, behind the word mountains, far from the countries Vokalia..",
-      "img_url": "http://localhost:63342/ft5_62_savory/static/images/img_3.jpg",
-      "price": "8.99",
-      "id": 7
+      "img_url": "http://localhost:63342/onlineShop/static/images/shop2.jpg",
+      "id": 2
+    }
+  ],
+  "shops": [
+    {
+      "shopName": "Mushrooms",
+      "introduce": "Far far away, behind the word mountains, far from the countries Vokalia..",
+      "img_url": "http://localhost:63342/onlineShop/static/images/shop1.jpg",
+      "id": 1,
+      "recipes": [
+        {
+          "recipe": "Fresh Mushrooms",
+          "introduce": "Far far away, behind the word mountains, far from the countries Vokalia..",
+          "img_url": "http://localhost:63342/onlineShop/static/images/img_1.jpg",
+          "price": "18.75",
+          "id": 1
+        },
+        {
+          "recipe": "Grilled Chiken Salad",
+          "introduce": "Far far away, behind the word mountains, far from the countries Vokalia..",
+          "img_url": "http://localhost:63342/onlineShop/static/images/img_3.jpg",
+          "price": "8.99",
+          "id": 2
+        },
+        {
+          "recipe": "Grilled Chiken Salad",
+          "introduce": "Far far away, behind the word mountains, far from the countries Vokalia..",
+          "img_url": "http://localhost:63342/onlineShop/static/images/img_3.jpg",
+          "price": "8.99",
+          "id": 3
+        },
+        {
+          "recipe": "Grilled Chiken Salad",
+          "introduce": "Far far away, behind the word mountains, far from the countries Vokalia..",
+          "img_url": "http://localhost:63342/onlineShop/static/images/img_3.jpg",
+          "price": "8.99",
+          "id": 4
+        },
+        {
+          "recipe": "Grilled Chiken Salad",
+          "introduce": "Far far away, behind the word mountains, far from the countries Vokalia..",
+          "img_url": "http://localhost:63342/onlineShop/static/images/img_3.jpg",
+          "price": "8.99",
+          "id": 5
+        },
+        {
+          "recipe": "Grilled Chiken Salad",
+          "introduce": "Far far away, behind the word mountains, far from the countries Vokalia..",
+          "img_url": "http://localhost:63342/onlineShop/static/images/img_3.jpg",
+          "price": "8.99",
+          "id": 6
+        }
+      ]
+    },
+    {
+      "shopName": "Chiken Rooms",
+      "introduce": "Far far away, behind the word mountains, far from the countries Vokalia..",
+      "img_url": "http://localhost:63342/onlineShop/static/images/shop2.jpg",
+      "id": 2,
+      "recipes": [
+        {
+          "recipe": "Fresh Mushrooms",
+          "introduce": "Far far away, behind the word mountains, far from the countries Vokalia..",
+          "img_url": "http://localhost:63342/onlineShop/static/images/img_1.jpg",
+          "price": "18.75",
+          "id": 1
+        },
+        {
+          "recipe": "Grilled Chiken Salad",
+          "introduce": "Far far away, behind the word mountains, far from the countries Vokalia..",
+          "img_url": "http://localhost:63342/onlineShop/static/images/img_3.jpg",
+          "price": "8.99",
+          "id": 2
+        }
+      ]
+    },
+    {
+      "shopName": "KFC Rooms",
+      "introduce": "Far far away, behind the word mountains, far from the countries Vokalia..",
+      "img_url": "http://localhost:63342/onlineShop/static/images/shop3.jpg",
+      "id": 3,
+      "recipes": [
+        {
+          "recipe": "Fresh Mushrooms",
+          "introduce": "Far far away, behind the word mountains, far from the countries Vokalia..",
+          "img_url": "http://localhost:63342/onlineShop/static/images/img_1.jpg",
+          "price": "18.75",
+          "id": 1
+        },
+        {
+          "recipe": "Grilled Chiken Salad",
+          "introduce": "Far far away, behind the word mountains, far from the countries Vokalia..",
+          "img_url": "http://localhost:63342/onlineShop/static/images/img_3.jpg",
+          "price": "8.99",
+          "id": 2
+        }
+      ]
     }
   ],
   "comments": [
@@ -20,6 +114,11 @@
       "id": 1,
       "body": "some comment",
       "postId": 1
+    },
+    {
+      "username": "asdf",
+      "password": "asdf",
+      "id": 2
     }
   ],
   "profile": {
