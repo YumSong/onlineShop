@@ -1,4 +1,16 @@
 jQuery(document).ready(function ($) {
+    window.localStorage.removeItem("user");
+
+    // let userJson = {
+    //     name:"tony",
+    //     password:"123456"
+    //     };
+    //
+    // let  userStr = JSON.stringify(userJson);//将JSON对象转化成字符串
+    //
+    // window.localStorage.setItem("user",userStr);
+    //
+
     $.get("http://localhost:3000/pobular_shops", function (data, status) {
         if (status == "success") {
             console.log(data);
@@ -30,15 +42,40 @@ jQuery(document).ready(function ($) {
     
     let user_login_btn = $('#user_login_btn');
     user_login_btn.on('click', function(event) {
-        let username = $('input[name="username"]').val();
-        let password = $('input[name="password"]').val();
+        let username = $('input[name="login_username"]').val();
+        let password = $('input[name="login_password"]').val();
         $.post(" http://localhost:3000/comments",
             {
                 username:username,
                 password:password
             },function(result){
             console.log(result);
-                $('#myModal').modal('hide')
+                $('#loginModal').modal('hide')
             });
     });
+
+    let register_form_btn = $('#register_form_btn');
+    register_form_btn.on('click', function(event) {
+        $('#loginModal').modal('hide');
+        $('#registerModal').modal();
+    });
+
+
+
+    let register_save_btn = $('#register_save_btn');
+    register_save_btn.on('click',function () {
+        let username = $('input[name="registerName"]').val();
+        let password = $('input[name="registerPassword"]').val();
+        console.log(username);
+        console.log(password);
+        // $.post(" http://localhost:3000/comments",
+        //     {
+        //         username:username,
+        //         password:password
+        //     },function(result){
+        //         console.log(result);
+        //         $('#myModal').modal('hide')
+        //     });
+    });
+
 });

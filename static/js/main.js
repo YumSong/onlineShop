@@ -269,6 +269,12 @@
 	// Loading page
 	var loaderPage = function() {
 		$(".gtco-loader").fadeOut("slow");
+        let userStr = window.localStorage.getItem("user");
+        if(userStr!=null){
+            let user = JSON.parse(userStr);
+            // $('li[class=btn-cta] a').remove();
+            $('li[class=btn-cta] ').html(`<a><i>${user.name}</i></a>`);
+        }
 	};
 
 	var counter = function() {
