@@ -271,9 +271,10 @@
 		$(".gtco-loader").fadeOut("slow");
         let userStr = window.localStorage.getItem("user");
         if(userStr!=null){
+            // window.localStorage.removeItem("user");
             let user = JSON.parse(userStr);
             // $('li[class=btn-cta] a').remove();
-            $('li[class=btn-cta] ').html(`<a><i>${user.name}</i></a>`);
+            $('li[class=btn-cta] ').html(`<a><i>${user.username}</i></a>`);
         }
 	};
 

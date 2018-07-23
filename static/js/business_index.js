@@ -1,5 +1,12 @@
 jQuery(document).ready(function ($) {
-    window.localStorage.removeItem("user");
+
+
+    // let pobular_shop= "http://localhost:3000/pobular_shops";
+    // let longi_shop="http://localhost:3000/comments";
+    // let register_url="http://10.222.29.151:9090/register";
+
+
+    // window.localStorage.removeItem("user");
 
     // let userJson = {
     //     name:"tony",
@@ -11,13 +18,12 @@ jQuery(document).ready(function ($) {
     // window.localStorage.setItem("user",userStr);
     //
 
-    $.get("http://localhost:3000/pobular_shops", function (data, status) {
+    $.get(pobular_shop_url, function (data, status) {
         if (status == "success") {
             console.log(data);
             write2Shop(data, "#shop_main");
         }
     });
-
     function write2Shop(data, shop_id) {
         let shop_main = $(shop_id);
         $.each(data, (idx, obj) => {
@@ -39,18 +45,21 @@ jQuery(document).ready(function ($) {
             shop_main.append(html);
         });
     }
-    
+
     let user_login_btn = $('#user_login_btn');
     user_login_btn.on('click', function(event) {
         let username = $('input[name="login_username"]').val();
         let password = $('input[name="login_password"]').val();
-        $.post(" http://localhost:3000/comments",
+        $.post(login_url,
             {
                 username:username,
                 password:password
             },function(result){
             console.log(result);
+            let resultStr = JSON.stringify(result);
+                window.localStorage.setItem("user",resultStr);
                 $('#loginModal').modal('hide')
+                location.reload()
             });
     });
 
@@ -68,14 +77,15 @@ jQuery(document).ready(function ($) {
         let password = $('input[name="registerPassword"]').val();
         console.log(username);
         console.log(password);
-        // $.post(" http://localhost:3000/comments",
-        //     {
-        //         username:username,
-        //         password:password
-        //     },function(result){
-        //         console.log(result);
-        //         $('#myModal').modal('hide')
-        //     });
+        $.post(register_url,
+            {
+                username:username,
+                password:password
+            },function(result){
+                console.log(result);
+                window.localStorage.setItem("user",result);
+                $('#myModal').modal('hide')
+            });
     });
 
 });

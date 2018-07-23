@@ -1,5 +1,5 @@
 jQuery(document).ready(function ($) {
-    $.get("http://localhost:3000/shops", function (data, status) {
+    $.get(shop_url, function (data, status) {
         if (status == "success") {
             write2Menu(data,"#menu_main");
         }
