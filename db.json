@@ -111,24 +111,9 @@
   ],
   "comments": [
     {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    },
-    {
       "username": "tony",
       "password": "123456",
       "id": 2
-    },
-    {
-      "username": "tony",
-      "password": "123456",
-      "id": 3
-    },
-    {
-      "username": "tony",
-      "password": "123456",
-      "id": 4
     }
   ],
   "profile": {
