@@ -264,7 +264,12 @@
 		});
 
 	};
-
+    let signout_btn = $('#signout_btn');
+    signout_btn.on('click',function () {
+        console.log("test");
+        window.localStorage.removeItem("user");
+        location.reload();
+    });
 
 	// Loading page
 	var loaderPage = function() {
