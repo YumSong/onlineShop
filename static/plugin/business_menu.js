@@ -96,7 +96,7 @@ jQuery(document).ready(function ($) {
                 '<h3><a href="#0"> 店名&nbsp;&nbsp;:&nbsp;&nbsp;' + shopname + '</a></h3>' +
                 '<span class="price">￥' + price + '</span>' +
                 '<div class="actions">' +
-                '<a href="#0" class="delete-item">删除</a>' +
+                // '<a href="#0" class="delete-item">删除</a>' +
                 '<div class="quantity">' +
                 '<label for="cd-product-' + proid + '">件数</label>' + select + '</div>' +
                 '</div></div></li>');

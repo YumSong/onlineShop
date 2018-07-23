@@ -10,6 +10,7 @@ jQuery(document).ready(function ($) {
     let cartCount = cartTrigger.children('.count');
 
     let undo = cartWrapper.find('.undo');
+    let clearCart = cartWrapper.find('#clearCart');
     let undoTimeoutId;
 
     //add product to cart
@@ -51,6 +52,12 @@ jQuery(document).ready(function ($) {
             quickUpdateCart();
         });
         undo.removeClass('visible');
+    });
+
+    clearCart.on('click', function (event) {
+        console.log("test");
+        window.localStorage.removeItem("cart");
+        location.reload()
     });
 
     function toggleCart(bool) {
@@ -164,6 +171,18 @@ jQuery(document).ready(function ($) {
         clearInterval(undoTimeoutId);
         cartList.find('.deleted').remove();
 
+        //***********
+        let cartStr = window.localStorage.getItem("cart");
+        productId = product.find('.id').find('.select').find('i').text();
+        console.log("update :"+cartStr);
+        // if(cartStr!=null){
+        //     let cartMap = JSON.parse(cartStr);
+        //     cartMap[]=productStr;
+        //     let cartMapStr = JSON.stringify(cartMap);
+        //     console.log("update "+cartStr);
+        //     window.localStorage.setItem("cart",cartMapStr);
+        // }
+        //***********
         let topPosition = product.offset().top - cartBody.children('ul').offset().top,
             productQuantity = Number(product.find('.quantity').find('.select').find('i').text()),
             productTotPrice = Number(product.find('.price').text().replace('￥', '')) * productQuantity;

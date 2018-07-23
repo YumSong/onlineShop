@@ -58,7 +58,7 @@ jQuery(document).ready(function ($) {
             console.log(result);
             let resultStr = JSON.stringify(result);
                 window.localStorage.setItem("user",resultStr);
-                $('#loginModal').modal('hide')
+                $('#loginModal').modal('hide');
                 location.reload()
             });
     });
